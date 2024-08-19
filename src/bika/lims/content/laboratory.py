@@ -66,6 +66,24 @@ schema = Organisation.schema.copy() + Schema((
         ),
     ),
 
+    StringField(
+    "Subtitle",
+        schemata="default",
+        widget=StringWidget(
+            label=_("Subtitle"),
+            description=_("A short subtitle for the laboratory."),
+        ),
+    ),
+
+    StringField(
+        "Ministry",
+            schemata="default",
+            widget=StringWidget(
+                label=_("Ministry"),
+                description=_("The Ministry that the laboratory is under."),
+            ),
+        ),
+
     UIDReferenceField(
         "Supervisor",
         required=0,

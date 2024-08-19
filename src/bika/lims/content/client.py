@@ -65,6 +65,22 @@ schema = Organisation.schema.copy() + Schema((
         ),
     ),
 
+    StringField(
+        "Gender",
+            schemata="default",
+            widget=StringWidget(
+                label=_("Gender"),
+            ),
+        ),
+
+    StringField(
+        "DateOfBirth",
+            schemata="default",
+            widget=StringWidget(
+                label=_("Date of Birth"),
+            ),
+        ),
+
     BooleanField(
         "BulkDiscount",
         default=False,
